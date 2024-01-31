@@ -1,8 +1,9 @@
+// index.js
 const express = require('express');
 const cors = require('cors');
 const dotenv = require('dotenv');
 const mongoose = require('mongoose');
-const userController = require('./controllers/userController');
+const apiRoutes = require('./routes/apiRoutes');
 
 dotenv.config();
 
@@ -29,17 +30,10 @@ const database = async () => {
 };
 
 database().then(() => {
-  // Kullanıcı oluşturma endpoint'i
-  app.post('/users', userController.createUser);
+  // API routes
+  app.use('/api', apiRoutes);
 
-  // Hello endpoint'i
-  app.get('/hello', (req, res) => {
-    // Kullanıcı oluşturma işlemleri burada olabilir
-    // Hello mesajını geri döndür
-    res.status(200).json({ message: 'Hello from the /hello endpoint!' });
-  });
 
-  // Başlangıç sayfası
   app.get('/', (req, res) => {
     res.send('Merhaba, Dünya!');
   });
@@ -48,5 +42,5 @@ database().then(() => {
     console.log("Server running on port", PORT);
   });
 }).catch((error) => {
-  console.error('MongoDB Bağlantısı Hatası:', error.message);
+  console.error('Uygulama Başlatma Hatası:', error.message);
 });

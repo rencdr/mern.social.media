@@ -1,13 +1,15 @@
+// routes/apiRoutes.js
 const express = require('express');
-const app = express();
+const router = express.Router();
 const userController = require('../controllers/userController');
+const postController = require('../controllers/postController');
 
-app.post('/users', userController.createUser);
+router.post('/users', userController.createUser);
 
+router.post('/post', postController.createPost);
 
-app.get('/', (req, res) => {
-  res.send('Merhaba, Dünya!');
+router.get('/hello', (req, res) => {
+  res.status(200).json({ message: 'Hello from the /hello endpoint!' });
 });
 
-app.listen(5000);
-
+module.exports = router;
