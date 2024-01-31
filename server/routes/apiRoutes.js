@@ -12,8 +12,6 @@ router.post('/post', postController.createPost);
 
 router.get('/displayPosts', postController.displayPosts);
 
-router.get('/hello', (req, res) => {
-  res.status(200).json({ message: 'Hello from the /hello endpoint!' });
-});
+router.put('/updatePosts/:postId', postController.updatePosts);
 
 module.exports = router;

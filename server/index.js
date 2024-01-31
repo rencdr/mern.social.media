@@ -22,10 +22,10 @@ mongoose.connect(MONGO_URI, {
 const database = async () => {
   try {
     await mongoose.connection.once('open', () => {
-      console.log('MongoDB Bağlantısı Başarılı');
+      console.log('MongoDB Connection is Success');
     });
   } catch (error) {
-    console.error('MongoDB Bağlantısı Hatası:', error.message);
+    console.error('MongoDB Connection:', error.message);
   }
 };
 
@@ -34,13 +34,9 @@ database().then(() => {
   app.use('/api', apiRoutes);
 
 
-  app.get('/', (req, res) => {
-    res.send('Merhaba, Dünya!');
-  });
-
   app.listen(PORT, () => {
     console.log("Server running on port", PORT);
   });
 }).catch((error) => {
-  console.error('Uygulama Başlatma Hatası:', error.message);
+  console.error('Server launch error:', error.message);
 });

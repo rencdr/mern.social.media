@@ -14,7 +14,7 @@ exports.createUser = async (req, res) => {
     });
 
     await newUser.save();
-    res.status(201).json({ message: 'Kullanıcı oluşturuldu' });
+    res.status(201).json({ message: 'User created' });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
@@ -27,16 +27,16 @@ exports.login = async (req, res) => {
     const user = await User.findOne({ username });
 
     if (!user) {
-      return res.status(401).json({ error: 'Kullanıcı bulunamadı' });
+      return res.status(401).json({ error: 'User not found.' });
     }
 
     const isPasswordValid = await bcrypt.compare(password, user.password);
 
     if (!isPasswordValid) {
-      return res.status(401).json({ error: 'Hatalı şifre' });
+      return res.status(401).json({ error: 'Wrong Password' });
     }
 
-    res.status(200).json({ message: 'Giriş başarılı', userId: user._id });
+    res.status(200).json({ message: 'Login Success', userId: user._id });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
