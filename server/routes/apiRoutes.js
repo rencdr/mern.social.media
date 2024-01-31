@@ -8,6 +8,8 @@ router.post('/users', userController.createUser);
 
 router.post('/post', postController.createPost);
 
+router.get('/displayPosts', postController.displayPosts);
+
 router.get('/hello', (req, res) => {
   res.status(200).json({ message: 'Hello from the /hello endpoint!' });
 });
