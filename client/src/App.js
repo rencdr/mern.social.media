@@ -1,10 +1,19 @@
+import {BrowserRouter , Routes , Route} from 'react-router-dom'
+import HomePage from './pages/HomePage';
+import AuthPage from './pages/AuthPage';
+
 
 function App() {
   return (
     <div>
-    <h1 className="text-1xl font-bold underline">
-      Hello world!
-    </h1>
+    <BrowserRouter>
+    <Routes>
+    <Route exact path='/' element={<HomePage/>} />
+    <Route exact path='/auth' element={<AuthPage/>} />
+
+    </Routes>
+
+    </BrowserRouter>
     </div>
   );
 }
