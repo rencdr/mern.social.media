@@ -1,4 +1,4 @@
-// // PostList.jsx
+// PostList.jsx
 // import React from 'react';
 // import PostCard from './PostCard';  // PostCard bileşenini içeri al
 // import usePostList from '../hooks/usePostList';
@@ -22,8 +22,7 @@
 //           <PostCard
 //             key={post._id}
 //             post={post}
-//             onEdit={/* Pass your onEdit function here */}
-//             onDelete={/* Pass your onDelete function here */}
+
 //           />
 //         ))}
 //       </div>

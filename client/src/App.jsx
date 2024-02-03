@@ -1,19 +1,19 @@
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
-import HomePage from "./pages/HomePage";
+// import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+// import HomePage from "./pages/HomePage";
 
-function App() {
-  return (
+// function App() {
+//   return (
     
-      <div>
-      <BrowserRouter>
-      <Routes>
-      <Route path="/" element={<HomePage />} />
+//       <div>
+//       <BrowserRouter>
+//       <Routes>
+//       <Route path="/" element={<HomePage />} />
 
-      </Routes>
-      </BrowserRouter>    
-      </div>
+//       </Routes>
+//       </BrowserRouter>    
+//       </div>
     
-  );
-}
+//   );
+// }
 
-export default App;
+// export default App;

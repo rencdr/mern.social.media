@@ -14,8 +14,7 @@ const PostCard = () => {
 
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-4">Post List</h1>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+      <div className="grid grid-cols-1  gap-6 mx-auto my-auto w-2/3 p-1 ">
         {posts.map(post => (
           <div key={post._id} className="bg-white p-4 rounded-md shadow-md">
             <h2 className="text-xl font-semibold mb-2">{post.content}</h2>

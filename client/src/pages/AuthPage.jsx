@@ -1,8 +1,11 @@
 import React from 'react'
-
+import AuthCard from '../components/AuthCard'
 const AuthPage = () => {
   return (
-    <div>Helloo AuthPage</div>
+    <div>
+            <AuthCard />
+
+    </div>
   )
 }
 
