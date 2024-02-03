@@ -1,40 +1,34 @@
-// PostList.js
+// // PostList.jsx
+// import React from 'react';
+// import PostCard from './PostCard';  // PostCard bileşenini içeri al
+// import usePostList from '../hooks/usePostList';
 
-import React from 'react';
-import usePostList from '../hooks/usePostList';
+// const PostList = () => {
+//   const { posts, loading, error } = usePostList();
 
-const PostList = () => {
-  const { posts, loading, error } = usePostList();
+//   if (loading) {
+//     return <p>Loading...</p>;
+//   }
 
-  if (loading) {
-    return <p>Loading...</p>;
-  }
+//   if (error) {
+//     return <p>Error: {error.message}</p>;
+//   }
 
-  if (error) {
-    return <p>Error: {error.message}</p>;
-  }
+//   return (
+//     <div>
+//       <h1 className="text-2xl font-bold mb-4">Post List</h1>
+//       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+//         {posts.map(post => (
+//           <PostCard
+//             key={post._id}
+//             post={post}
+//             onEdit={/* Pass your onEdit function here */}
+//             onDelete={/* Pass your onDelete function here */}
+//           />
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
 
-  return (
-    <div>
-      <h1>Post List</h1>
-      <ul>
-        {posts.map(post => (
-          <li key={post._id}>
-            <h2>{post.content}</h2>
-            <p>User: {post.user.username}</p>
-            <p>Likes: {post.likes.length}</p>
-            <ul>
-              {post.comments.map(comment => (
-                <li key={comment._id}>
-                  <p>{comment.content} - {comment.user.username}</p>
-                </li>
-              ))}
-            </ul>
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
-};
-
-export default PostList;
+// export default PostList;

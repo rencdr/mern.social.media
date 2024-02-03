@@ -1,5 +1,5 @@
 import React from 'react'
-import PostList from '../components/PostList'
+import PostCard from '../components/PostCard'
 
  
 const HomePage = () => {
@@ -7,7 +7,7 @@ const HomePage = () => {
     <div className="text-1xl font-bold underline text-blue-500">
         <h1 >
           Hello Home Page
-          <PostList></PostList>
+          <PostCard/>
         </h1>
     </div>
   )
