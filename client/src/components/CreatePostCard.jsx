@@ -10,10 +10,8 @@ const CreatePostCard = () => {
     try {
       await createPost({ content: newPost });
 
-      // Gönderi başarıyla oluşturulduğunda işlemler burada yapılabilir
       console.log('Post created successfully');
     } catch (error) {
-      // Hata durumunda yapılacak işlemler burada yapılabilir
       console.error('Error creating post:', error);
     }
   };

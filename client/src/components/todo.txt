@@ -1,4 +1,3 @@
-createpost localstorage userid al
 deletepost isteği yaz
 kullanıcı takip etme özelliği oluştur
 all feed ve following feed diye ayır ve takip edilen ile butun kullanıcılar olarak postları ayır

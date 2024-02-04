@@ -3,9 +3,7 @@ import React from 'react';
 
 const Navbar = () => {
   const handleLogout = () => {
-    // localStorage temizleme işlemi
     localStorage.removeItem('userId');
-    // İstediğiniz başka işlemleri de burada gerçekleştirebilirsiniz
   };
 
   return (
