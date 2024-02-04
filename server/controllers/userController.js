@@ -1,7 +1,6 @@
 const bcrypt = require('bcrypt');
 const User = require('../models/user.js');
 
-
 exports.createUser = async (req, res) => {
   try {
     // bcrypt
@@ -14,11 +13,14 @@ exports.createUser = async (req, res) => {
     });
 
     await newUser.save();
-    res.status(201).json({ message: 'User created' });
+    
+    // Kullanıcı oluşturulduğunda userId'yi döndür
+    res.status(201).json({ message: 'User created', userId: newUser._id });
   } catch (error) {
     res.status(500).json({ error: error.message });
   }
 };
+
 
 exports.login = async (req, res) => {
   try {

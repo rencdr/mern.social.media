@@ -1,5 +1,6 @@
-import { useState } from "react";
-import axios from "axios";
+// hooks/useLogin.js
+import { useState } from 'react';
+import axios from 'axios';
 
 const useLogin = () => {
   const [username, setUsername] = useState('');
@@ -8,15 +9,15 @@ const useLogin = () => {
 
   const login = async () => {
     try {
-      const response = await axios.post('your_backend_api_url/login', {
+      const response = await axios.post('http://localhost:5000/api/login', {
         username,
         password,
       });
 
-      console.log(response.data); 
-
+      // Başarılı login durumunda userId'yi localStorage'a kaydet ve ana sayfaya yönlendir
+      localStorage.setItem('userId', response.data.userId);
     } catch (error) {
-      setError(error.response.data.error);
+      setError(error.response.data.message);
     }
   };
 

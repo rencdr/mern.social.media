@@ -1,0 +1,4 @@
+butun api isteklerini reduxa geçir
+login işlemi localstorage kontrol
+createpost localstorage userid al
+deletepost isteği yaz
