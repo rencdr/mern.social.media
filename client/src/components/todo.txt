@@ -2,3 +2,6 @@ butun api isteklerini reduxa geçir
 login işlemi localstorage kontrol
 createpost localstorage userid al
 deletepost isteği yaz
+kullanıcı takip etme özelliği oluştur
+all feed ve following feed diye ayır ve takip edilen ile butun kullanıcılar olarak postları ayır
+postlara begenı ekle ver en cok begenılenler yukarıda kalsın
